@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shingar Bills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <h2 id="up">Shingar Bills</h2>
+    <div id="shopDetails">
+      <label>SN:</label>
+      <input
+        type="text"
+        id="shopName"
+        placeholder="Enter Shop Name" /><br /><br />
+      <label>Add:</label>
+      <input type="text" id="address" placeholder="Enter Address" /><br /><br />
+      <label>Ph:</label>
+      <input
+        type="text"
+        id="phone"
+        placeholder="Enter Phone Number"
+        maxlength="15" />
+    </div>
+    <div id="searchBox">
+      <input type="text" id="searchInput" placeholder="Search items..." />
+    </div>
+    <div id="categoryButtons"></div>
+    <div id="itemsContainer"></div>
+    <div id="extraItemsSection">
+      <div id="extraItemsLabel">
+        Extra Items / Special Requests (one per line):
+      </div>
+      <textarea
+        id="extraItemsInput"
+        rows="10"
+        placeholder="e.g. 'Loose powder 2kg x 3', 'Special Gift'"></textarea>
+    </div>
+    <div style="max-width: 1024px; margin: auto; text-align: center">
+      <button onclick="saveBill()" class="action sb" id="down">
+        Save Bill
+      </button>
+      <button onclick="showAllBills()" class="action sab">
+        Show All Bills
+      </button>
+      <button onclick="copyAllBills()" class="action cab">
+        Copy All Bills
+      </button>
+      <button onclick="resetForm()" class="action rt">Reset</button>
+      <button onclick="showTotalAllItems()" class="action tai">
+        Total all items
+      </button>
+      <button onclick="showHistory()" class="action hist">History</button>
+    </div>
+    <div id="historyBox"></div>
+
+    <div id="billBox"></div>
+    <div id="allBills"></div>
+    <div id="totalsBox"></div>
+    <a href="#up"><i class="fa-solid fa-arrow-up up"></i></a>
+    <a href="#down"><i class="fa-solid fa-arrow-down down"></i></a>
+    <!-- <script src="app.js"></script> -->
+    <!-- <script src="change.js"></script> -->
+    <!-- <script src="last.js"></script> -->
+    <script src="app.js"></script>
+  </body>
+</html>
